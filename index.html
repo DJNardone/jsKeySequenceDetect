@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Key Detection</title>
+  <script type="text/JavaScript" src="https://www.cornify.com/js/cornify.js"></script>
+  <link rel="icon" href="https://fav.farm/🔥" />
+</head>
+<body>
+<script>
+  const pressed = [];
+  const konamiCode = 'djdoesit';
+
+  window.addEventListener("keyup", (e) => {
+    console.log(e.key);
+    pressed.push(e.key);
+    pressed.splice(-konamiCode.length - 1, pressed.length - konamiCode.length);
+    if(pressed.join('').includes(konamiCode)) {
+      console.log('YOU GOT IT!!!!');
+      cornify_add();
+    }
+    console.log(pressed);
+  });
+
+</script>
+</body>
+</html>
+
